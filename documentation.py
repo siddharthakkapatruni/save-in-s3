@@ -79,7 +79,9 @@ def save(name):
 		dir = f"{name}-documentation"
 		folder_name = f"{name}-Documents"
 		for file_doc in os.listdir(dir):
-			s3.put_object(Bucket=f"{bucket_name}",Key=(folder_name+f"/{file_doc}"))
+			#with open(f"{dir}/{file_doc}",'rb') as f:
+			s3.upload_file(f"{dir}/{file_doc}",f"{bucket_name}",f"{dir}/{file_doc}")	
+			#s3.put_object(Bucket=f"{bucket_name}",Key=(folder_name+f"/{f}"))
 		response = Response()
 		response.headers["access-control-allow-headers"] = "Origin"
 		response.headers["Content-Type"] = "Accept"
