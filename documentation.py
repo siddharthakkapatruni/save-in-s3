@@ -14,18 +14,18 @@ try:
 	import boto3
 except ModuleNotFoundError as module_error:
 	print("boto3 has to be installed")
-	sys.exit(0)
+	exit()
 try:
 	import os
 except ModuleNotFoundError as module_error:
 	print(f"os module has to be installed")
-	sys.exit(0)
+	exit()
 
 try:
 	from werkzeug.utils import secure_filename
 except ModuleNotFoundError as module_error:
 	print(f"werkzeug.utils module has to be installed")
-	sys.exit(0)
+	exit()
 	
 vamstar_app = Flask(__name__)
 def upload_folder(name):
