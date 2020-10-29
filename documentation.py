@@ -69,7 +69,6 @@ def save(name):
 		sys.exit(0)
 	else:
 		if request.method == 'POST':
-			print(request.files['SSC'])
 			docs = ['SSC', 'Plus2', 'B.Tech', 'Masters'	]
 		for doc in docs:
 			file = request.files[doc]
@@ -77,7 +76,6 @@ def save(name):
 				file.save(os.path.join(vamstar_app.config['UPLOAD_FOLDER'],file.filename))
 			except IsADirectoryError as dir_err:
 				pass
-			print(request.files[doc])
 		dir = f"{name}-documentation"
 		folder_name = f"{name}-Documents"
 		for file_doc in os.listdir(dir):
