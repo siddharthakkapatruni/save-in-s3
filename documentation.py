@@ -45,6 +45,9 @@ def html_form(name):
 			<p>Plus2 Marksheet &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='file' id ='Plus-file' name='Plus2'/> </p>\
 			<p>B.Tech/B.E Marksheet &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp <input type='file' id ='B.Tech-file' name='B.Tech'/> </p>\
 			<p>Masters Certificate  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Masters-file' name='Masters'/> </p>\
+			<p>Last Payslip-1 &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip-1' name='Payslip1'/> </p>\
+			<p>Last Payslip-2  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip2-file' name='Payslip2'/> </p>\
+			<p>Last Payslip-3  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip3-file' name='Payslip3'/> </p>\
 			<p>Current Employers Appointment letter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Appointment-file' name='Appointment'/> </p>\
 			<p>Professional References&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Reference-file' name='Reference'/> </p>\
 			<p><input type = submit name = submit/> </p>\
