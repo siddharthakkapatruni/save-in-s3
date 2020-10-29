@@ -6,7 +6,7 @@ except ModuleNotFoundError as module_error:
 	print("Pandas has to be installed")
 	exit()
 try:
-	from flask import Flask,request, Response
+	from flask import Flask,request, Response, render_template
 except ModuleNotFoundError as module_error:
 	print("Flask has to be installed")
 	exit()
@@ -40,18 +40,7 @@ def vamstar_home():
 	return vamstar_string
 
 def html_form(name):
-	return f"<form action=http://127.0.0.1:9514/save/{name} method = POST enctype='multipart/form-data'> \
-			<p>SSC Marksheet&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type='file' id ='SSC-file' name='SSC'/> </p>\
-			<p>Plus2 Marksheet &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='file' id ='Plus-file' name='Plus2'/> </p>\
-			<p>B.Tech/B.E Marksheet &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp <input type='file' id ='B.Tech-file' name='B.Tech'/> </p>\
-			<p>Masters Certificate  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Masters-file' name='Masters'/> </p>\
-			<p>Last Payslip-1 &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip-1' name='Payslip1'/> </p>\
-			<p>Last Payslip-2  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip2-file' name='Payslip2'/> </p>\
-			<p>Last Payslip-3  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Payslip3-file' name='Payslip3'/> </p>\
-			<p>Current Employers Appointment letter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Appointment-file' name='Appointment'/> </p>\
-			<p>Professional References&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='file' id ='Reference-file' name='Reference'/> </p>\
-			<p><input type = submit name = submit/> </p>\
-			</form>"
+	return render_template('documents.html',name=name)
 			
 @vamstar_app.route('/vamstar-documentation-step/<string:name>')
 def home_page(name):
